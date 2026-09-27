@@ -168,6 +168,7 @@ python examples/morning_brief.py
 
 - טוקן משותף אחד מתאים לפריסה פנימית. לגישה לפי משתמש מחליפים את `StaticTokenVerifier` באימות מול ספק הזהויות של הארגון (למשל Entra ID) וממפים קבוצות להרשאות.
 - המתאם ל-SAP מכסה הזמנות ייצור בלבד, ולא נבדק מול מערכת חיה.
+- בנוי על MCP Python SDK מסדרה 1.x (נעול ל-`<2`). המעבר לסדרה 2.x עוד לא נעשה.
 - נתוני הדוגמה בדויים.
 
 </div>
@@ -183,6 +184,6 @@ python examples/morning_brief.py
 - Governance: read-only, column-level classification, masking and stable pseudonyms for people, row caps, JSONL audit log of every call including failures.
 - Transports: stdio for Claude Desktop / Claude Code; Streamable HTTP with bearer-token auth and OAuth protected-resource metadata; Docker image (non-root) with an NGINX reverse-proxy example.
 - 25 pytest tests including protocol-level tests with a real MCP client and a stdio subprocess; CI builds the container and checks it rejects unauthenticated calls.
-- The SAP adapter is tested against mocked OData responses only.
+- Built on the MCP Python SDK 1.x (pinned `<2`). The SAP adapter is tested against mocked OData responses only.
 
 Sample data is fictional. MIT License.
