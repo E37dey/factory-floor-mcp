@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "factory-floor-mcp"
+version = "0.1.0"
+description = "Read-only MCP server that gives Claude safe access to manufacturing plant data (Excel, SAP OData)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Eiliya Nudelman" }]
+requires-python = ">=3.10"
+dependencies = [
+  "mcp>=1.10",
+  "openpyxl>=3.1",
+  "httpx>=0.27",
+  "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "anyio>=4"]
+
+[project.scripts]
+factory-floor-mcp = "factory_mcp.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/factory_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "factory-floor": {
+      "command": "factory-floor-mcp",
+      "env": {
+        "FACTORY_MCP_DATA": "C:\\exports\\plant.xlsx",
+        "FACTORY_MCP_MAX_LEVEL": "internal",
+        "FACTORY_MCP_AUDIT_LOG": "C:\\logs\\factory-mcp\\audit.jsonl"
+      }
+    }
+  }
+}
